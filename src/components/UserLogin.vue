@@ -100,7 +100,6 @@ export default {
         });
         alert("User registered successfully!");
       } catch (error) {
-        console.error("Registration failed:", error);
         errorMessage.value = "Registration error: " + error.message;
       }
     };
@@ -108,17 +107,13 @@ export default {
     const handleLogin = async () => {
       try {
         await loginUser(loginEmail.value, loginPassword.value);
-        alert("User logged in successfully!");
-        // Aquí deberías verificar si el usuario está autenticado
-        // Esto es un ejemplo simplificado, en una aplicación real necesitarás un mecanismo seguro para verificar la autenticación
-        const isAuthenticated = true; // Cambia esto por tu lógica de autenticación real
+        const isAuthenticated = true;
         if (isAuthenticated) {
           router.push("/news-feed");
         } else {
           errorMessage.value = "Login error: User not authenticated";
         }
       } catch (error) {
-        console.error("Login failed:", error);
         errorMessage.value = "Login error: " + error.message;
       }
     };

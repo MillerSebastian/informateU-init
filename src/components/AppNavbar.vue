@@ -1,12 +1,9 @@
 <template>
   <nav class="bg-gray-800 p-4 flex justify-between items-center">
-    <!-- Título "Informateü" -->
     <div class="text-white text-xl font-bold">
       Informate
       <span class="text-yellow-500">ü</span>
     </div>
-
-    <!-- Enlaces de Navegación -->
     <ul class="flex space-x-4">
       <li>
         <router-link to="/profile" class="text-white hover:text-gray-400"
@@ -63,7 +60,3 @@ export default {
   },
 };
 </script>
-
-<style>
-/* Agrega estilos adicionales si es necesario */
-</style>
